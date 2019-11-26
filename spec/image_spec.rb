@@ -20,7 +20,7 @@ RSpec.describe Image, type: :model do
         [0, 1, 0, 0],
         [0, 0, 0, 0]
       ]
-     image = Image.new(input.map(&:dup))
+     image = Image.new(input)
      expect(image.blur.data).to eq expected
 
      expect(image.data).to eq(input)
